@@ -1,0 +1,5 @@
+1. HTTP(Hyper Text Transfer Protocol)
+ - 클라이언트(브라우저)와 서버 간 데이터 통신 규약
+ - Stateless(무상태) 특성 : 요청 간 서버가 상태를 기억하지 않음 -> 인증, 세션, 쿠기가 필요한 이유
+
+2. HTTP 요청(Requset) 구
