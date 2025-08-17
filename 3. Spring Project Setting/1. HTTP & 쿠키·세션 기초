@@ -3,9 +3,9 @@
  - Stateless(무상태) 특성 : 요청 간 서버가 상태를 기억하지 않음 -> 인증, 세션, 쿠기가 필요한 이유
 
 2. HTTP 요청(Requset) 구조
- - 'GET /user/profile HTTP/1.1
+ -  GET /user/profile HTTP/1.1
     Host: example.com
     Authorization: Bearer <token>
     Content-Type: application/json
 
-    { "name": "test" }'
+    { "name": "test" }
