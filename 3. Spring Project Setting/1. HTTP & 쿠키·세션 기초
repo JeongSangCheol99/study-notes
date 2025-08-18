@@ -1,6 +1,7 @@
 1. HTTP(Hyper Text Transfer Protocol)
  - 클라이언트(브라우저)와 서버 간 데이터 통신 규약
- - Stateless(무상태) 특성 : 요청 간 서버가 상태를 기억하지 않음 -> 인증, 세션, 쿠기가 필요한 이유
+ - Stateless(무상태) 특성 : 요청 간 서버가 상태를 기억하지 않음(첫 통신에서 데이터를 주고받아도 다음 통신에서는 기억X) -> 인증, 세션, 쿠기가 필요한 이유
+ - Connectionless(비연결성) : 클라이언트가 서버에 요청했을 때, 그 요청에 맞는 응답을 보낸 후 연결을 끊는 처리 방식
  - Requset/Response 기반 : 항상 요청 -> 응답의 흐름
  - Text 기반 : 헤더는 문자열, 바디는 다양한 형식(JSON, HTML 등)
 
@@ -12,8 +13,14 @@
  - DELETE : 삭제
 
  3. HTTP 상태 코드
-  - 2XX(성공) : 200 OK, 201 Created
-  - 3xx(리다이렉션) :   
+  - 2xx(성공) : 200 OK, 201 Created
+  - 3xx(리다이렉션) : 301 Moved Permanently, 302 Found
+  - 4xx(클라이언트 오류) : 401 Unauthorized(인증x), 403 Forbidden(인가x), 404 Not Found
+  - 5xx(서버 오류) : 500 Internal Server Error
+
+ 4. 쿠키(Cookie)
+   - 서버가 사용자의 웹 브라우저에 전송하는 작은 데이터 조각
+   - 브라우저는 데이터 조각들을 저장해 놓았다가, 동일한 서버에 재 요청 시 제장된 데이터를 함께 전
  
 
 
