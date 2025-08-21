@@ -1,0 +1,17 @@
+1. @RestController
+  - REST API 개발을 위한 컨트롤러
+  - @Controller + @ResponseBody의 조합으로 반환값을 뷰로 해석하지 않고 HTTP 응답 본문(Response Body)에 바로 전달
+  - 주로 JSON, XML 형식 데이터를 반환
+
+2. @Controller
+ - Spring MVC의 전통적인 컨트롤러로, 주로 웹 애플리케이션(View 기반) 개발에서 사용
+ - 매서드 반환값을 뷰 이름(View Resolver)으로 처리
+ - Model 객체를 활용해 데이터를 뷰(JSP, Thymeleaf 등)에 전달
+
+| 구분                    | @Controller                       | @RestController               |
+| --------------------- | --------------------------------- | ----------------------------- |
+| 주 목적                  | **View 렌더링 (JSP, Thymeleaf 등)**   | **REST API (JSON, XML 반환)**   |
+| 반환값 처리 방식             | View 이름 → View Resolver → HTML 변환 | HTTP Response Body에 직접 반환     |
+| `@ResponseBody` 필요 여부 | 필요 (붙여야 JSON 응답 가능)               | 불필요 (자동 적용)                   |
+| 주요 사용처                | 전통적인 MVC 웹 애플리케이션                 | API 서버, SPA(React/Vue) 백엔드    |
+| 예시 반환                 | `"hello"` → `hello.html` 뷰 페이지    | `"hello"` → `"hello"` 문자열 그대로 |
