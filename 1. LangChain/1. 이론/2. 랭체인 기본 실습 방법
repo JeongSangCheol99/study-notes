@@ -1,3 +1,4 @@
+## 터미널 환경 실행
 1. python 설치 후 python --version으로 버전 확인
 2. vscode에서 폴더 선택(원하는 폴더 생성 후 선택)
 3. vscode 터미널에서 python -m venv venv 입력 후 .\venv\Scripts\Activate.ps1 입력(앞에 (venv) 나오면 성공)
@@ -7,3 +8,9 @@
 5. 설치 이상 없으면 https://console.anthropic.com에서 apikey 발급 후 .env에 복붙
  - ANTHROPIC_API_KEY=sk-ant-여기에_복사한_키
  6. 최상위 경로 밑에 파일 생성 후 테스트
+
+## 터미널 환경을 웹화
+ 1. pip install streamlit
+  - streamlit은 사용자가 메시지를 입력하는 등 액션을 할 때마다 파이썬 파일 전체를 위에서부터 다시 실행. 즉 매번 빈 리스트로 초기화 됨
+  이거를 해결하는게 st.session_state. 다시 실행되어도 값이 유지되는 보관함?이라서, 대화 기록을 여기에 넣어 두고 사영하면 됨. 쉽게 이해할려면
+  message 리스트가 이 보관함으로 이사간다고 생각하면 됨.
